@@ -1,15 +1,56 @@
-:root { --cor: #004aad; --fundo: #f6f8ff; }
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--fundo);color:#333}
-.topo{background:var(--cor);color:#fff;text-align:center;padding:26px 16px}
-.sub{margin:6px 0 0;opacity:.9}
-.menu{display:flex;gap:12px;justify-content:center;background:#333;padding:10px}
-.menu a{color:#fff;text-decoration:none;font-weight:bold;padding:6px 10px}
-.menu a.ativo,.menu a:hover{text-decoration:underline}
-.conteudo{max-width:1000px;margin:22px auto 80px;padding:0 16px}
-.hero img{width:100%;border-radius:12px;display:block;box-shadow:0 6px 18px rgba(0,0,0,.08)}
-.hero figcaption{text-align:center;font-size:.9rem;color:#555;margin-top:6px}
-.cartao{background:#fff;padding:18px;border-radius:12px;margin-top:18px;box-shadow:0 4px 12px rgba(0,0,0,.06)}
-.grid-2{display:grid;grid-template-columns:1fr;gap:16px;margin-top:16px}
-@media(min-width:820px){.grid-2{grid-template-columns:1fr 1fr}}
-.rodape{text-align:center;padding:14px;background:#222;color:#fff;position:sticky;bottom:0}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revista Aura Etérea - Edição de Autocuidado</title>
+    <link rel="stylesheet" href="pagina1.css" />
+</head>
+<body>
+
+    <header class="topo">
+        <h1>Revista Aura Etérea</h1>
+        <p class="sub">Edição de Autocuidado & Bem-Estar</p>
+        <p class="editor">Editor-Chefe: <strong>Laysa Pereira</strong></p>
+    </header>
+
+    <nav class="menu">
+        <a href="pagina1.html" class="ativo">Início</a>
+        <a href="pagina2.html">Reportagem</a>
+        <a href="pagina3.html">Fundadora</a>
+        <a href="pagina4.html">Produtos</a>
+    </nav>
+
+    <main class="conteudo">
+        
+        <section class="editorial">
+            <h2>Editorial: A Pausa Necessária</h2>
+            <p>
+                O incenso, do latim que significa "queimar", é um dos mais antigos rituais humanos. De sua origem no Egito - onde era uma oferenda aos Faraós - à Índia, onde guiava a meditação nas tradições védicas, a fumaça sempre foi vista como uma ponte entre o terrestre e o divino. Em um mundo acelerado, ele nos convida a uma pausa.
+            </p>
+        </section>
+
+        <section class="reportagem-fundadora">
+            <div class="texto-fundadora">
+                <h2>A Fundadora</h2>
+                <p>
+                    A fundadora da **AURA ETÉREA**, a etnobotânica **Dra. Sofia Melo**, percebeu que, embora a prática fosse universal, a qualidade raramente era. "As pessoas merecem um aroma que seja sincero. O que vendemos não é apenas cheiro, é a transferência de uma vibração", afirma a Dra. Melo.
+                </p>
+            </div>
+        </section>
+        
+        <section class="missao-aura">
+            <h2>Nossa Missão</h2>
+            <p>
+                A **AURA ETÉREA** nasceu dessa frustração com a qualidade industrial. A missão? Criar um incenso de vareta que honrasse o legado, mas que fosse acessível ao ritual diário.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        &copy; Todos os direitos reservados a Laysa Pereira
+    </footer>
+
+</body>
+</html>
