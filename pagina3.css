@@ -1,15 +1,120 @@
-:root { --cor:#047857; --fundo:#f3fcf7; }
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--fundo);color:#2b2b2b}
-.topo{background:var(--cor);color:#fff;text-align:center;padding:26px 16px}
-.sub{margin:6px 0 0;opacity:.9}
-.menu{display:flex;gap:12px;justify-content:center;background:#333;padding:10px}
-.menu a{color:#fff;text-decoration:none;font-weight:bold;padding:6px 10px}
-.menu a.ativo,.menu a:hover{text-decoration:underline}
-.conteudo{max-width:1100px;margin:22px auto 80px;padding:0 16px}
-.hero img{width:100%;border-radius:12px;display:block;box-shadow:0 6px 18px rgba(0,0,0,.08)}
-.hero figcaption{text-align:center;font-size:.9rem;color:#555;margin-top:6px}
-.cartao{background:#fff;padding:18px;border-radius:12px;margin-top:18px;box-shadow:0 4px 12px rgba(0,0,0,.06)}
-.grid-3{display:grid;grid-template-columns:1fr;gap:16px;margin-top:16px}
-@media(min-width:920px){.grid-3{grid-template-columns:repeat(3,1fr)}}
-.rodape{text-align:center;padding:14px;background:#222;color:#fff;position:sticky;bottom:0}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revista Aura Etérea - Folhas e Resinas</title>
+    <link rel="stylesheet" href="pagina3.css" /> 
+    <style>
+        /* Estilos para replicar a aparência do conteúdo da imagem */
+        :root {
+            --cor: #047857; /* Cor principal definida no pagina3.css */
+            --fundo: #f3fcf7;
+        }
+        body {
+            background-color: var(--fundo);
+            color: #2b2b2b; /* Cor de texto adaptada do .2b2b2b visto no CSS */
+        }
+        .cartao {
+            background-color: #fff;
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 18px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .06);
+        }
+        .lista-qualidade {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .lista-qualidade li {
+            margin-bottom: 10px;
+        }
+        .lista-qualidade li::before {
+            content: "• "; /* Simula um marcador simples */
+            color: var(--cor);
+            font-weight: bold;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr; /* Colunas em telas menores (padrão do CSS) */
+            gap: 16px;
+            margin-top: 16px;
+        }
+        @media (min-width: 920px) { /* Ponto de quebra definido no seu CSS */
+            .grid-3 {
+                grid-template-columns: repeat(3, 1fr); /* Três colunas em telas maiores */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="topo">
+        <h1>Revista Aura Etérea</h1>
+        <p class="sub">A Arte de Aromatizar Milenarmente</p>
+        <p class="editor">Editor-Chefe: <strong>Laysa Pereira</strong></p>
+    </header>
+
+    <nav class="menu">
+        <a href="pagina1.html">Início</a>
+        <a href="pagina2.html">Reportagem</a>
+        <a href="pagina3.html" class="ativo">Folhas e Resinas</a>
+        <a href="pagina4.html">Produtos</a>
+    </nav>
+
+    <main class="conteudo">
+        
+        <h2>FOLHAS E RESINAS - A Arte de Aromatizar Milenarmente</h2>
+        <p>
+            O resgate da tradição indiana do incenso Massala está transformando a forma como buscamos bem-estar em casa.
+        </p>
+        
+        <div style="float: right; margin: 0 0 15px 15px; width: 40%; min-width: 250px;">
+             <img src="img/incenso-tecnica-pequena.jpg" alt="Pequena imagem de um incenso aceso em vaso." style="width: 100%; border-radius: 8px;" />
+             <p style="font-style: italic; font-size: 0.9em; text-align: center;">
+                 Em um mundo onde a velocidade é a norma, a marca Folhas e Resinas surge com um propósito claro: resgatar a arte de desacelerar. Seu fundador, o botânico e perfumista Ramiro Alves, passou anos viajando pela Índia e Nepal, estudando a técnica Massala.
+             </p>
+        </div>
+
+        <div class="grid-3">
+            
+            <div class="cartao">
+                <h3>O Retorno à Raiz: Por Que a Fumaça Importa?</h3>
+                <p>
+                    Antes de ser um item de decoração ou um simples cheiro, o incenso sempre foi sobre intenção e purificação. Nos templos do Egito Antigo, onde resinas preciosas eram queimadas para honrar deuses, aos monastérios tibetanos, onde a fumaça guiava a meditação, a história do incenso é a busca humana pela conexão.
+                </p>
+            </div>
+
+            <div class="cartao">
+                <h3>A Magia do Massala: Menos Carvão, Mais Essência</h3>
+                <p>
+                    A maioria dos incensos de vareta (paizinho) que encontramos no mercado são feitos pelo método *Dippel* (imersão), onde o bastão de bambu é mergulhado em um pó de carvão e, depois, em um óleo sintético. Já a Folhas e Resinas optou por um caminho mais difícil, mas infinitamente mais puro: o método Massala.
+                </p>
+            </div>
+
+            <div class="cartao">
+                <h3>O Segredo da Qualidade:</h3>
+                <p>
+                    O incenso Massala não tem carvão, ou o utiliza em pouca quantidade. Em vez disso, ele é feito com uma rica e espessa pasta (massala) de ingredientes naturais:
+                </p>
+                <ul class="lista-qualidade">
+                    <li>Resinas Naturais: Como o Olíbano e a Mirra;</li>
+                    <li>Ervas e Pó de Madeira: Sândalo e cascas aromáticas;</li>
+                    <li>Gomas Vegetais: Usadas como aglutinantes naturais.</li>
+                    <li>Óleos Essenciais Puros: O aroma é extraído diretamente da natureza.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <figure class="hero" style="margin-top: 30px;">
+             <img src="img/preparo-massala.jpg" alt="Mãos preparando a pasta de Massala para incenso." style="width: 100%; border-radius: 12px; display: block;" />
+            </figure>
+
+    </main>
+
+    <footer class="rodape">
+        &copy; Todos os direitos reservados a <strong>Laysa Pereira</strong>
+    </footer>
+
+</body>
+</html>
