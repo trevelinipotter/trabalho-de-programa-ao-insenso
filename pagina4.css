@@ -1,14 +1,127 @@
-:root { --cor:#6b21a8; --fundo:#faf5ff; }
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--fundo);color:#2b2b2b}
-.topo{background:var(--cor);color:#fff;text-align:center;padding:26px 16px}
-.sub{margin:6px 0 0;opacity:.9}
-.menu{display:flex;gap:12px;justify-content:center;background:#333;padding:10px}
-.menu a{color:#fff;text-decoration:none;font-weight:bold;padding:6px 10px}
-.menu a.ativo,.menu a:hover{text-decoration:underline}
-.conteudo{max-width:1100px;margin:22px auto 80px;padding:0 16px}
-.hero img{width:100%;border-radius:12px;display:block;box-shadow:0 6px 18px rgba(0,0,0,.08)}
-.hero figcaption{text-align:center;font-size:.9rem;color:#555;margin-top:6px}
-.cartao{background:#fff;padding:18px;border-radius:12px;margin-top:18px;box-shadow:0 4px 12px rgba(0,0,0,.06)}
-.lista ul{margin:0;padding-left:18px}
-.rodape{text-align:center;padding:14px;background:#222;color:#fff;position:sticky;bottom:0}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revista Aura Etérea - Destaques</title>
+    <link rel="stylesheet" href="pagina4.css" /> 
+    <style>
+        /* Estilos adicionais baseados na imagem, pois não há grid definido no CSS fornecido */
+        :root {
+            --cor: #6b21a8; /* Cor principal do pagina4.css */
+            --fundo: #faf5ff; /* Cor de fundo do pagina4.css */
+        }
+        body {
+            background-color: var(--fundo);
+            color: #2b2b2b; 
+        }
+        .destaques-container {
+            max-width: 800px; /* Para centralizar o conteúdo visual da imagem */
+            margin: 22px auto;
+            padding: 16px;
+            background-color: #ddd; /* Cor de fundo cinza escura da imagem */
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+            color: #222; /* Cor de texto da imagem */
+        }
+        .destaques-container h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .texto-destaque {
+            text-align: justify;
+            padding: 0 20px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .chamada-final {
+            text-align: center;
+            margin-bottom: 25px;
+            padding: 0 20px;
+        }
+        .imagens-destaque {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .imagens-destaque img {
+            max-width: 45%;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+        }
+        /* Ajuste de estilo para o rodapé, que é diferente no pagina4.css */
+        .rodape {
+            text-align: center;
+            padding: 14px;
+            background-color: #222;
+            color: #fff;
+            position: sticky;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="topo">
+        <h1>Revista Aura Etérea</h1>
+        <p class="sub">Destaques</p>
+        <p class="editor">Editor-Chefe: <strong>Laysa Pereira</strong></p>
+    </header>
+
+    <nav class="menu">
+        <a href="pagina1.html">Início</a>
+        <a href="pagina2.html">Reportagem</a>
+        <a href="pagina3.html">Folhas e Resinas</a>
+        <a href="pagina4.html" class="ativo">Destaques</a>
+    </nav>
+
+    <main class="conteudo">
+        
+        <div class="destaques-container">
+            <h2>DESTAQUES</h2>
+
+            <div class="texto-destaque">
+                <p>
+                    <strong>DESTAQUE AURA ETÉREA:</strong> A fragrância Sândalo Indiano, presente na linha CLAREZA, é a resina mais utilizada para a meditação há milênios. Sua nota amadeirada e quente acalma a mente, facilitando a conexão espiritual e a concentração.
+                </p>
+                <p>
+                    Crie a sua Aura Etérea.
+                </p>
+            </div>
+            
+            <div class="imagens-destaque">
+                <img src="img/ilustracao-massala.jpg" alt="Ilustração de mãos moendo incenso." />
+                <img src="img/incenso-sandalwood.jpg" alt="Incenso de Sândalo com ervas ao redor." />
+            </div>
+
+            <div class="chamada-final">
+                <p>
+                    Acender um incenso da AURA ETÉREA é um ato de intenção, um convite para desacelerar e um resgate da pureza dos ingredientes. Permita que a fumaça dissipe o caos e revele a calma.
+                </p>
+                <p>
+                    Descubra a coleção completa e os incensários artesanais no site oficial.
+                </p>
+                <p>
+                    Local para Contato / Rodapé:<br>
+                    @AuraEtereaOficial<br>
+                    www.auraeterea.com.br
+                    <span style="font-size: 1.5em; display: block; margin-top: 5px;">♥</span>
+                </p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="rodape">
+        &copy; Todos os direitos reservados a <strong>Laysa Pereira</strong>
+    </footer>
+
+</body>
+</html>
