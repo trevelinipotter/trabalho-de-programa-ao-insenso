@@ -1,25 +1,110 @@
 :root {
   --prim: #b30000;
-  --escuro: #222;
-  --cinza: #f3f3f3;
-  --texto: #333;
+  --escuro: #414141;
+  --cinza: #858585;
+  --fundo: #787878;
+  --caixa: #ececec;
+  --texto: #232323;
+  --subtitulo: #313131;
+  --claro: #fff;
 }
-* { box-sizing: border-box; }
-body {
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--texto);
-  background: var(--cinza);
+  padding: 0;
 }
-.topo { background: var(--prim); color: #fff; text-align: center; padding: 28px 16px; }
-.topo h1 { margin: 0 0 6px; }
-.sub { margin: 0; opacity: .9; }
-.editor { margin: 6px 0 0; font-size: .95rem; }
-.menu { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; background: #333; padding: 10px; }
-.menu a { color: #fff; text-decoration: none; font-weight: bold; padding: 6px 10px; }
-.menu a.ativo, .menu a:hover { text-decoration: underline; }
-.conteudo { max-width: 1000px; margin: 24px auto 80px; padding: 0 16px; }
-.hero img { width: 100%; border-radius: 12px; display: block; }
-.hero figcaption { text-align: center; font-size: .9rem; color: #555; margin-top: 6px; }
-.editorial { background: #fff; padding: 18px; border-radius: 12px; margin-top: 18px; box-shadow: 0 4px 14px rgba(0,0,0,.06); }
-.rodape { text-align: center; padding: 14px; background: var(--escuro); color: #fff; position: sticky; bottom: 0; width: 100%; }
+
+/* Fundo da página */
+body {
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: "Times New Roman", Times, serif;
+  min-height: 100vh;
+}
+
+/* Cabeçalho principal */
+.topo {
+  text-align: center;
+  color: var(--texto);
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 36px 18px 10px 18px;
+  letter-spacing: .03em;
+}
+
+/* Caixa de destaque central (citação) */
+.caixa-citacao {
+  background: var(--caixa);
+  color: var(--subtitulo);
+  border-radius: 50px/40px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+  font-size: 1.15rem;
+  text-align: center;
+  margin: 14px auto 30px auto;
+  max-width: 500px;
+  padding: 36px 28px 30px 28px;
+}
+
+/* Grid para duas colunas + divisão vertical */
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr 3px 1fr;
+  align-items: flex-start;
+  gap: 36px;
+  max-width: 950px;
+  margin: 0 auto 48px auto;
+  padding: 0 16px;
+}
+
+/* Colunas de texto */
+.coluna {
+  color: var(--texto);
+  font-size: 1.10rem;
+  line-height: 1.6;
+  text-align: center;
+  padding-top: 6px;
+}
+
+/* Linha vertical decorativa */
+.divisor {
+  width: 3px;
+  background: linear-gradient(to bottom, #c0c0c0 10%, #6d6d6d 90%);
+  border-radius: 8px;
+  height: 93%;
+  margin: 15px auto 0 auto;
+}
+
+/* Imagem central arredondada */
+.imagem {
+  display: block;
+  margin: 16px auto 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 22px rgba(0,0,0,0.18);
+  max-width: 98%;
+  width: 220px;
+  height: auto;
+}
+
+/* Rodapé simples */
+.rodape {
+  text-align: center;
+  padding: 20px;
+  background: var(--escuro);
+  color: var(--claro);
+  font-size: 0.96rem;
+  letter-spacing: .02em;
+  margin-top: 44px;
+}
+
+/* Responsivo */
+@media (max-width: 700px) {
+  .conteudo {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .divisor {
+    display: none;
+  }
+}
